@@ -1,84 +1,235 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>عمر الصيقل - السيرة الذاتية</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عُمَر الصّيقل | Omar Al-Saiqal</title>
+<style>
+/* CSS Styles */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+body {
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+header h1 {
+    font-size: 2.5rem;
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+header p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+img.profile {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffcc00;
+    margin-bottom: 15px;
+}
+section {
+    margin-bottom: 25px;
+}
+section h2 {
+    font-size: 1.5rem;
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.job, .education, .volunteer {
+    margin-bottom: 15px;
+}
+.job h3, .education h3, .volunteer h3 {
+    font-size: 1.2rem;
+    color: #fff;
+}
+.job p, .education p, .volunteer p, .skill p, .language p, .certificate p {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-top: 3px;
+}
+ul.skills-list, ul.languages-list, ul.certificates-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+ul.skills-list li, ul.languages-list li, ul.certificates-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-top: 20px;
+}
+.dark-mode {
+    background: linear-gradient(135deg, #121212, #1c1c1c);
+    color: #eee;
+}
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    img.profile {
+        width: 120px;
+        height: 120px;
+    }
+}
+</style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
-
-  <!-- Header -->
-  <header class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-gray-800 to-gray-900">
-    <img src="my-pic.jpeg" alt="عمر الصيقل" class="w-40 h-40 rounded-full border-4 border-white shadow-lg mb-6" data-aos="fade-down"/>
-    <h1 class="text-4xl font-bold mb-2" data-aos="fade-up">عمر الصيقل</h1>
-    <p class="text-xl text-gray-300 mb-4" data-aos="fade-up" data-aos-delay="100">مهندس متنوع المواهب | مختص في الإعلام الرقمي والإدارة</p>
-    <div class="flex gap-4" data-aos="fade-up" data-aos-delay="200">
-      <a href="mailto:omerm30@gmail.com" class="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-500">البريد الإلكتروني</a>
-      <a href="tel:00905525974020" class="px-4 py-2 bg-green-600 rounded-lg hover:bg-green-500">اتصل بي</a>
-    </div>
-  </header>
-
-  <!-- About -->
-  <section class="max-w-4xl mx-auto py-16 px-4" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-6">الملخص المهني</h2>
-    <p class="text-lg leading-relaxed text-gray-300">
-      مهندس شغوف بالتعلم وتطوير الذات، متعدد المهارات والخبرات في مجالات تقنية وإبداعية وإدارية.
-      أتمتع بخبرة في إدارة وسائل التواصل الاجتماعي، وتصميم الجرافيك، والتعليق الصوتي، والإدارة والإشراف على المشاريع.
-      أمتلك قدرة على التكيف والعمل بكفاءة في بيئات متنوعة، وأجيد التواصل بثلاث لغات (العربية، الإنجليزية، التركية).
-      حافظ لكتاب الله الكريم، وألتزم بالقيم المهنية والأخلاقية في جميع الأعمال التي أقوم بها.
-    </p>
-  </section>
-
-  <!-- Skills -->
-  <section class="bg-gray-800 py-16 px-4" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-6 text-center">المهارات الأساسية</h2>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto text-gray-300">
-      <li>إدارة حسابات ومنصات السوشيال ميديا</li>
-      <li>محترف في استخدام الحاسوب وتطبيقاته</li>
-      <li>تصميم الجرافيك والتعليق الصوتي</li>
-      <li>الإدارة والإشراف على المشاريع</li>
-      <li>التخطيط والتنظيم والمتابعة</li>
-      <li>العمل الجماعي وحل المشكلات</li>
-      <li>التحدث بالعربية والإنجليزية والتركية</li>
-      <li>حفظ القرآن الكريم كاملًا</li>
-    </ul>
-  </section>
-
-  <!-- Experience -->
-  <section class="max-w-4xl mx-auto py-16 px-4" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-6">الخبرات العملية</h2>
-    <ul class="space-y-4 text-gray-300">
-      <li>إدارة وسائل التواصل الاجتماعي وتصميم المحتوى</li>
-      <li>إدارة الحملات الرقمية وتحليل الأداء</li>
-      <li>إنشاء تصاميم احترافية جاذبة</li>
-      <li>التعليق الصوتي للمشاريع الدعائية والوثائقية</li>
-      <li>الإدارة والإشراف على فرق العمل</li>
-    </ul>
-  </section>
-
-  <!-- Education -->
-  <section class="bg-gray-800 py-16 px-4" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-6 text-center">التعليم</h2>
-    <p class="text-center text-gray-300">بكالوريوس هندسة الميكاترونيك – [جامعة نجم الدين أربكان-تركيا] – [2024]</p>
-  </section>
-
-  <!-- Achievements -->
-  <section class="max-w-4xl mx-auto py-16 px-4" data-aos="fade-up">
-    <h2 class="text-3xl font-bold mb-6">الإنجازات والشهادات</h2>
-    <ul class="space-y-2 text-gray-300">
-      <li>حفظ القرآن الكريم كاملًا</li>
-      <li>شهادات ودورات في إدارة السوشيال ميديا والتصميم الجرافيكي والتعليق الصوتي</li>
-      <li>خبرة عملية في العمل متعدد الثقافات واللغات</li>
-      <li>شهادات مشاركة وتطوع في مؤتمرات طلابية وأعمال تطوعية</li>
-    </ul>
-  </section>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+<body>
+<button class="toggle-btn" onclick="toggleDarkMode()">تبديل الوضع</button>
+<div class="container">
+<header>
+<img src="https://via.placeholder.com/160" alt="Omar Al-Saiqal" class="profile">
+<h1>عُمَر الصَّيْقَل | Omar Al-Saiqal</h1>
+<p>مدير إداري ومتخصص في التسويق الرقمي والميكاترونيك</p>
+</header>
+<section>
+<h2>الملخص المهني</h2>
+<p>مدير إداري ومتخصص في التسويق الرقمي والإعلام بخبرة متعددة تشمل إدارة الحملات التسويقية، تطوير الأعمال، التفاوض الدولي، وإدارة الفعاليات. مؤسس وكالة تسويق ناجحة في إسطنبول، ومدير فرق عمل في مجالات التسويق الرقمي، إنتاج المحتوى، وإدارة الصادرات الدولية. أتميز بقدرات في القيادة، إدارة المشاريع، تقنيات الإعلام، والـ IT إلى جانب خلفية تقنية في الميكاترونيك.</p>
+</section>
+<section>
+<h2>الخبرات العملية</h2>
+<div class="job">
+<h3>مؤسس ومدير – وكالة أوما ميديا للتسويق | إسطنبول – تركيا | 2023 – حتى الآن</h3>
+<p>قيادة الحملات التسويقية الرقمية وإدارة فرق الإعلام وبناء استراتيجيات تسويق مبتكرة.</p>
+</div>
+<div class="job">
+<h3>مشرف – ملتقى مشكاة القرآني | تركيا | 2025</h3>
+<p>تنظيم ومتابعة الفعاليات القرآنية والإشراف على الحضور.</p>
+</div>
+<div class="job">
+<h3>مهندس مبيعات ومدير صادرات – Global Bridge Group | إسطنبول – تركيا | 2024 – 2025</h3>
+<p>إدارة عمليات البيع والتصدير والتفاوض مع العملاء والإشراف على اللوجستيات.</p>
+</div>
+<div class="job">
+<h3>مدرب ذكاء اصطناعي عن بعد – Outlier | 2022 – حتى الآن</h3>
+<p>تدريب وتقييم نماذج الذكاء الاصطناعي وتحسين جودة البيانات.</p>
+</div>
+<div class="job">
+<h3>متدرب مهندس ميكاترونيك – Alamex Asansör | تركيا | 2023</h3>
+<p>تركيب المكونات الإلكترونية وبرمجة المتحكمات الدقيقة وضبط الجودة.</p>
+</div>
+<div class="job">
+<h3>مهندس تصنيع – فريق Hud-Saba للطائرات بدون طيار | قونية – تركيا | 2021 – 2023</h3>
+<p>تصميم وتصنيع مكونات الطائرات بدون طيار والتأهل لنهائيات مسابقة Bayraktar الدولية.</p>
+</div>
+<div class="job">
+<h3>فني صيانة أجهزة محمولة – مركز السلام | اليمن | 2017 – 2018</h3>
+<p>تشخيص وصيانة أعطال الأجهزة الذكية (برمجية وعتادية).</p>
+</div>
+</section>
+<section>
+<h2>الخبرات التطوعية</h2>
+<div class="volunteer">
+<h3>رئيس لجنة الرقابة – اتحاد طلاب اليمن في تركيا | 2021</h3>
+<p>الإشراف على الأنشطة المالية والإدارية وضمان الشفافية.</p>
+</div>
+<div class="volunteer">
+<h3>عضو لجنة التنظيم واللوجستيات – منتدى طلاب اليمن الصيفي | 2022</h3>
+<p>تنظيم فعاليات بمشاركة 400+ طالب، إدارة الحشود وضمان انسيابية الأنشطة.</p>
+</div>
+<div class="volunteer">
+<h3>رئيس لجنة النظام – أول عرس جماعي في تركيا | 2025</h3>
+<p>الإشراف على الانضباط والتنظيم وضمان نجاح الفعالية.</p>
+</div>
+</section>
+<section>
+<h2>التعليم</h2>
+<div class="education">
+<h3>بكالوريوس هندسة ميكاترونيك – جامعة نجم الدين أربكان | تركيا | 2019 – 2024</h3>
+</div>
+</section>
+<section>
+<h2>المهارات</h2>
+<ul class="skills-list">
+<li>إدارة الحملات التسويقية</li>
+<li>تطوير الأعمال</li>
+<li>إنتاج المحتوى الرقمي</li>
+<li>برمجة PLC / C# / CNC</li>
+<li>SolidWorks / AutoCAD</li>
+<li>قيادة الفرق والعمل الجماعي</li>
+</ul>
+</section>
+<section>
+<h2>اللغات</h2>
+<ul class="languages-list">
+<li>العربية: لغة أم</li>
+<li>الإنجليزية: جيد جدًا</li>
+<li>التركية: جيد جدا</li>
+</ul>
+</section>
+<section>
+<h2>الشهادات والدورات</h2>
+<ul class="certificates-list">
+<li>دبلوم تسويق رقمي وإستراتيجيات إعلامية</li>
+<li>دورة في التخطيط الإستراتيجي</li>
+<li>دورة PLC Programming</li>
+<li>دورة شاملة في برمجة C#</li>
+<li>دورة CNC Machine Programming</li>
+<li>Mechatronics & IIoT</li>
+<li>رخصة قيادة طائرة بدون طيار (UAV)</li>
+<li>دبلوم لغة إنجليزية مع تحضير IELTS</li>
+<li>رخصة قيادة</li>
+</ul>
+</section>
+<section>
+<h2>تواصل</h2>
+<p>يمكنك التواصل عبر البريد الإلكتروني أو الهاتف أو LinkedIn:</p>
+<p>Email: <a href="mailto:omerm30@gmail.com" style="color:#ffcc00;">omerm30@gmail.com</a> | Phone: <a href="tel:+905525974020" style="color:#ffcc00;">+90 552 597 40 20</a> | <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" style="color:#ffcc00;">LinkedIn</a></p>
+</section>
+<footer>
+<p>جميع الحقوق محفوظة © 2025 عمر الصّيقل</p>
+</footer>
+</div>
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+</script>
 </body>
 </html>
