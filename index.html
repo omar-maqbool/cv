@@ -1,237 +1,438 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>عُمَر الصّيقل | Omar Al-Saiqal</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title id="doc-title">Omar Al-Saiqal</title>
+<link rel="icon" href="data:," />
 <style>
-/* CSS Styles */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
-}
-body {
-    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
-    color: #fff;
-    min-height: 100vh;
-    padding: 20px;
-}
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-header h1 {
-    font-size: 2.5rem;
-    color: #ffcc00;
-    margin-bottom: 5px;
-}
-header p {
-    font-size: 1.2rem;
-    color: #ccc;
-}
-img.profile {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ffcc00;
-    margin-bottom: 15px;
-}
-section {
-    margin-bottom: 25px;
-}
-section h2 {
-    font-size: 1.5rem;
-    color: #ffcc00;
-    border-bottom: 2px solid #ffcc00;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-}
-.job, .education, .volunteer {
-    margin-bottom: 15px;
-}
-.job h3, .education h3, .volunteer h3 {
-    font-size: 1.2rem;
-    color: #fff;
-}
-.job p, .education p, .volunteer p, .skill p, .language p, .certificate p {
-    color: #aaa;
-    font-size: 0.95rem;
-    margin-top: 3px;
-}
-ul.skills-list, ul.languages-list, ul.certificates-list {
-    list-style: none;
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-ul.skills-list li, ul.languages-list li, ul.certificates-list li {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 8px 12px;
-    border-radius: 12px;
-    font-size: 0.9rem;
-}
-footer {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #aaa;
-    margin-top: 20px;
-}
-.dark-mode {
-    background: linear-gradient(135deg, #121212, #1c1c1c);
-    color: #eee;
-}
-.toggle-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    background: #ffcc00;
-    color: #000;
-    font-weight: bold;
-}
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    header p {
-        font-size: 1rem;
-    }
-    img.profile {
-        width: 120px;
-        height: 120px;
-    }
-}
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0;font-family:'Cairo',sans-serif}
+  body{
+    background:linear-gradient(135deg,#1e1e2f,#2c2c54);
+    color:#fff;min-height:100vh;padding:22px;
+  }
+  .container{max-width:980px;margin:0 auto;background:rgba(255,255,255,0.05);border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.45)}
+  header{text-align:center;margin-bottom:26px}
+  img.profile{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid #ffcc00;margin-bottom:12px}
+  header h1{font-size:2.4rem;color:#ffcc00;margin-bottom:6px}
+  header p.lead{color:#ccc;font-size:1.05rem;margin-bottom:4px}
+  section{margin-bottom:20px}
+  section h2{font-size:1.35rem;color:#ffcc00;border-bottom:2px solid #ffcc00;display:inline-block;padding-bottom:6px;margin-bottom:10px}
+  .job,.education,.volunteer{margin-bottom:12px}
+  .job h3,.education h3,.volunteer h3{font-size:1.05rem;color:#fff}
+  .job p,.education p,.volunteer p,.contact p{color:#bbb;margin-top:6px;line-height:1.45}
+  ul{list-style:none;padding-left:0;display:flex;flex-wrap:wrap;gap:10px}
+  li.tag{background:rgba(255,255,255,0.08);padding:8px 12px;border-radius:10px;font-size:0.95rem;color:#fff}
+  footer{text-align:center;color:#aaa;margin-top:14px;font-size:0.9rem}
+  .toggle-btn{position:fixed;top:18px;right:18px;padding:8px 12px;border-radius:9px;border:none;cursor:pointer;background:#ffcc00;color:#000;font-weight:700}
+  #lang-switch{position:fixed;top:18px;left:18px;padding:6px;border-radius:8px}
+  .link-accent{color:#ffcc00;text-decoration:none}
+  @media (max-width:600px){header h1{font-size:1.9rem}img.profile{width:120px;height:120px}}
+  .rtl { direction: rtl; text-align: right; }
+  .ltr { direction: ltr; text-align: left; }
 </style>
 </head>
 <body>
-<button class="toggle-btn" onclick="toggleDarkMode()">تبديل الوضع</button>
-<div class="container">
-<header>
-<img src="profile.jpg" alt="Omar Al-Saiqal" class="profile">
-<h1>عُمَر الصَّيْقَل | Omar Al-Saiqal</h1>
-<p>مهندس واداري ومسوق رقمي</p>
-<p>العمر:27  |  يمني</p>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Mode</button>
 
-</header>
-<section>
-<h2>الملخص المهني</h2>
-<p>مهندس ميكاترونيك و إداري وشغوف بالتسويق الرقمي والإعلام بخبرة متعددة تشمل إدارة الحملات التسويقية، تطوير الأعمال، التفاوض الدولي، وإدارة الفعاليات. شغوف بالتعلم والمطالعة.</p>
-</section>
-<section>
-<h2>الخبرات العملية</h2>
-<div class="job">
-<h3>مؤسس ومدير – وكالة أوما ميديا للتسويق | إسطنبول – تركيا | 2023 – حتى الآن <a href="https://www.instagram.com/oma.media1/" target="_blank" style="color:#ffcc00; font-size:1rem; text-decoration:none;">Instagram</a></h3>
-    <p>قيادة الحملات التسويقية الرقمية وإدارة فرق الإعلام وبناء استراتيجيات تسويق مبتكرة.</p>
-</div>
-<div class="job">
-<h3>مشرف – ملتقى مشكاة القرآني | تركيا | 2025</h3>
-<p>تنظيم ومتابعة الفعاليات القرآنية والإشراف على الحضور.</p>
-</div>
-<div class="job">
-<h3>مهندس مبيعات ومدير صادرات – Global Bridge Group | إسطنبول – تركيا | 2024 – 2025</h3>
-<p>إدارة عمليات البيع والتصدير والتفاوض مع العملاء والإشراف على اللوجستيات.</p>
-</div>
-<div class="job">
-<h3>مدرب ذكاء اصطناعي عن بعد – Outlier | 2022 – حتى الآن</h3>
-<p>تدريب وتقييم نماذج الذكاء الاصطناعي وتحسين جودة البيانات.</p>
-</div>
-<div class="job">
-<h3>متدرب مهندس ميكاترونيك – Alamex Asansör | تركيا | 2023</h3>
-<p>تركيب المكونات الإلكترونية وبرمجة المتحكمات الدقيقة وضبط الجودة.</p>
-</div>
-<div class="job">
-<h3>مهندس تصنيع – فريق Hud-Saba للطائرات بدون طيار | قونية – تركيا | 2021 – 2023</h3>
-<p>تصميم وتصنيع مكونات الطائرات بدون طيار والتأهل لنهائيات مسابقة Bayraktar الدولية.</p>
-</div>
-<div class="job">
-<h3>فني صيانة أجهزة محمولة – مركز السلام | اليمن | 2017 – 2018</h3>
-<p>تشخيص وصيانة أعطال الأجهزة الذكية (برمجية وعتادية).</p>
-</div>
-</section>
-<section>
-<h2>الخبرات التطوعية</h2>
-<div class="volunteer">
-<h3>رئيس لجنة الرقابة – اتحاد طلاب اليمن في تركيا | 2021</h3>
-<p>الإشراف على الأنشطة المالية والإدارية وضمان الشفافية.</p>
-</div>
-<div class="volunteer">
-<h3>عضو لجنة التنظيم واللوجستيات – منتدى طلاب اليمن الصيفي | 2022</h3>
-<p>تنظيم فعاليات بمشاركة 400+ طالب، إدارة الحشود وضمان انسيابية الأنشطة.</p>
-</div>
-<div class="volunteer">
-<h3>رئيس لجنة النظام – أول عرس جماعي في تركيا | 2025</h3>
-<p>الإشراف على الانضباط والتنظيم وضمان نجاح الفعالية.</p>
-</div>
-</section>
-<section>
-<h2>التعليم</h2>
-<div class="education">
-<h3>بكالوريوس هندسة ميكاترونيك – جامعة نجم الدين أربكان | تركيا | 2019 – 2024</h3>
-</div>
-</section>
-<section>
-<h2>المهارات</h2>
-<ul class="skills-list">
-<li>إدارة الحملات التسويقية</li>
-<li>تطوير الأعمال</li>
-<li>إنتاج المحتوى الرقمي</li>
-<li>برمجة PLC / C# / CNC</li>
-<li>SolidWorks / AutoCAD</li>
-<li>قيادة الفرق والعمل الجماعي</li>
-</ul>
-</section>
-<section>
-<h2>اللغات</h2>
-<ul class="languages-list">
-<li>العربية: لغة أم</li>
-<li>الإنجليزية: جيد جدًا</li>
-<li>التركية: جيد جدا</li>
-</ul>
-</section>
-<section>
-<h2>الشهادات والدورات</h2>
-<ul class="certificates-list">
-<li>دبلوم تسويق رقمي وإستراتيجيات إعلامية</li>
-<li>دورة في التخطيط الإستراتيجي</li>
-<li>دورة PLC Programming</li>
-<li>دورة شاملة في برمجة C#</li>
-<li>دورة CNC Machine Programming</li>
-<li>Mechatronics & IIoT</li>
-<li>رخصة قيادة طائرة بدون طيار (UAV)</li>
-<li>دبلوم لغة إنجليزية مع تحضير IELTS</li>
-<li>رخصة قيادة</li>
-</ul>
-</section>
-<section>
-<h2>تواصل</h2>
-<p>يمكنك التواصل عبر البريد الإلكتروني أو الهاتف أو LinkedIn:</p>
-<p>Email: <a href="mailto:omerm30@gmail.com" style="color:#ffcc00;">omerm30@gmail.com</a> | Phone: <a href="tel:+905525974020" style="color:#ffcc00;">+90 552 597 40 20</a> | <a href="https://www.linkedin.com/in/omar-a-2bb81a1b8" target="_blank" style="color:#ffcc00;">LinkedIn</a></p>
-</section>
-<footer>
-<p>جميع الحقوق محفوظة © 2025 عمر الصّيقل</p>
-</footer>
-</div>
+  <select id="lang-switch" aria-label="Language switch">
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+    <option value="tr">Türkçe</option>
+  </select>
+
+  <div class="container" id="main-container">
+    <header id="header">
+      <img src="profile.jpg" alt="Omar Al-Saiqal" class="profile" />
+      <h1 id="name">Omar Al-Saiqal</h1>
+      <p class="lead" id="role">Engineer, Manager & Digital Marketer</p>
+      <p class="lead" id="age">Age: 27 | Yemeni</p>
+    </header>
+
+    <section>
+      <h2 id="summary-title">Professional Summary</h2>
+      <p id="summary">Mechatronics engineer and manager with passion for digital marketing and media, experienced in campaign management, business development, international negotiation and event management. Keen on continuous learning.</p>
+    </section>
+
+    <section>
+      <h2 id="exp-title">Work Experience</h2>
+      <div id="experiences"></div>
+    </section>
+
+    <section>
+      <h2 id="vol-title">Volunteer Experience</h2>
+      <div id="volunteers"></div>
+    </section>
+
+    <section>
+      <h2 id="edu-title">Education</h2>
+      <div class="education">
+        <h3 id="edu-1">B.Sc. Mechatronics Engineering – Necmettin Erbakan University | Turkey | 2019 – 2024</h3>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="skills-title">Skills</h2>
+      <ul id="skills-list"></ul>
+    </section>
+
+    <section>
+      <h2 id="langs-title">Languages</h2>
+      <ul id="langs-list"></ul>
+    </section>
+
+    <section>
+      <h2 id="cert-title">Certificates & Courses</h2>
+      <ul id="cert-list"></ul>
+    </section>
+
+    <section>
+      <h2 id="contact-title">Contact</h2>
+      <div class="contact">
+        <p id="contact-text">Email: <a href="mailto:omerm30@gmail.com" class="link-accent">omerm30@gmail.com</a> | Phone: <a href="tel:+905525974020" class="link-accent">+90 552 597 40 20</a> | <a href="https://www.linkedin.com/in/omar-a-2bb81a1b8" target="_blank" class="link-accent">LinkedIn</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <p id="footer-text">All Rights Reserved © 2025 Omar Al-Saiqal</p>
+    </footer>
+  </div>
+
 <script>
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
+/* --- Translations data (manually written) --- */
+const translations = {
+  en: {
+    docTitle: "Omar Al-Saiqal | Portfolio",
+    name: "Omar Al-Saiqal",
+    role: "Engineer, Manager & Digital Marketer",
+    age: "Age: 27 | Yemeni",
+    summaryTitle: "Professional Summary",
+    summary: "Mechatronics engineer and manager passionate about digital marketing and media. Experience includes campaign management, business development, international negotiation, logistics oversight, and event management. Eager to learn and adapt.",
+    expTitle: "Work Experience",
+    experiences: [
+      {
+        title: "Founder & Director – OMA Media Agency | Istanbul – Turkey | 2023 – Present",
+        desc: "Leading digital marketing campaigns, managing media teams, developing business strategies, client acquisition, and campaign analytics. Instagram: @oma.media1"
+      },
+      {
+        title: "Supervisor – Mishkat Quran Forum | Turkey | 2025",
+        desc: "Organizing Quranic events and supervising participant management and logistics."
+      },
+      {
+        title: "Sales Engineer & Exports Manager – Global Bridge Group | Istanbul – Turkey | 2024 – 2025",
+        desc: "Managed sales, export operations, client negotiations, and logistics coordination."
+      },
+      {
+        title: "Remote AI Trainer – Outlier | 2022 – Present",
+        desc: "Training and evaluating AI models, improving data quality and annotation processes."
+      },
+      {
+        title: "Mechatronics Intern – Alamex Asansör | Turkey | 2023",
+        desc: "Assembled electronic components, programmed microcontrollers and supported QC."
+      },
+      {
+        title: "Manufacturing Engineer – Hud-Saba Drone Team | Konya – Turkey | 2021 – 2023",
+        desc: "Designed and manufactured UAV components; qualified for Bayraktar International finals."
+      },
+      {
+        title: "Mobile Devices Technician – Al-Salam Center | Yemen | 2017 – 2018",
+        desc: "Diagnosed and repaired software and hardware issues on smart devices."
+      }
+    ],
+    volTitle: "Volunteer Experience",
+    volunteers: [
+      { title: "Head of Audit Committee – Yemen Students Union in Turkey | 2021", desc: "Oversaw financial and administrative activities ensuring transparency." },
+      { title: "Logistics & Organization Committee Member – Yemen Students Summer Forum | 2022", desc: "Organized events with 400+ students, crowd management and activity flow." },
+      { title: "Head of Order Committee – First Mass Wedding in Turkey | 2025", desc: "Managed discipline, coordination and ensured event success." }
+    ],
+    eduTitle: "Education",
+    education: "B.Sc. Mechatronics Engineering – Necmettin Erbakan University | Turkey | 2019 – 2024",
+    skillsTitle: "Skills",
+    skills: ["Digital Campaign Management","Business Development","Digital Content Production","PLC / C# / CNC Programming","SolidWorks / AutoCAD","Team Leadership & Coordination"],
+    langsTitle: "Languages",
+    languages: ["Arabic: Native","English: Very Good","Turkish: Good"],
+    certTitle: "Certificates & Courses",
+    certificates: [
+      "Diploma in Digital Marketing & Media Strategies",
+      "Course in Strategic Planning",
+      "PLC Programming Course",
+      "Comprehensive C# Programming Course",
+      "CNC Machine Programming Course",
+      "Mechatronics & IIoT",
+      "UAV (Drone) Pilot License",
+      "Diploma in English Language with IELTS preparation",
+      "Driver's License"
+    ],
+    contactTitle: "Contact",
+    contactText: "Email: omerm30@gmail.com | Phone: +90 552 597 40 20 | LinkedIn",
+    footer: "All Rights Reserved © 2025 Omar Al-Saiqal"
+  },
+
+  ar: {
+    docTitle: "عُمَر الصّيقل | السيرة الذاتية",
+    name: "عُمَر الصّيقل",
+    role: "مهندس، إداري ومسوق رقمي",
+    age: "العمر: 27 | يمني",
+    summaryTitle: "الملخص المهني",
+    summary: "مهندس ميكاترونيك وإداري شغوف بالتسويق الرقمي والإعلام. تشمل خبراته إدارة الحملات التسويقية، تطوير الأعمال، التفاوض الدولي، الإشراف على اللوجستيات، وتنظيم الفعاليات. مهتم بالتعلم المستمر.",
+    expTitle: "الخبرات العملية",
+    experiences: [
+      {
+        title: "مُؤَسس ومدير – وكالة OMA Media للتسويق | إسطنبول – تركيا | 2023 – حتى الآن",
+        desc: "قيادة الحملات التسويقية الرقمية، إدارة فرق الإعلام، تطوير الأعمال، اكتساب العملاء، وتحليل أداء الحملات. Instagram: @oma.media1"
+      },
+      {
+        title: "مشرف – ملتقى مشكاة القرآني | تركيا | 2025",
+        desc: "تنظيم الفعاليات القرآنية والإشراف على إدارة الحضور واللوجستيات."
+      },
+      {
+        title: "مهندس مبيعات ومدير صادرات – Global Bridge Group | إسطنبول – تركيا | 2024 – 2025",
+        desc: "إدارة عمليات البيع والتصدير والتفاوض مع العملاء والتنسيق اللوجستي."
+      },
+      {
+        title: "مدرب ذكاء اصطناعي عن بعد – Outlier | 2022 – حتى الآن",
+        desc: "تدريب وتقييم نماذج الذكاء الاصطناعي وتحسين جودة البيانات وعمليات الوسم."
+      },
+      {
+        title: "متدرب مهندس ميكاترونيك – Alamex Asansör | تركيا | 2023",
+        desc: "تركيب المكونات الإلكترونية، برمجة المتحكمات الدقيقة، ودعم ضمان الجودة."
+      },
+      {
+        title: "مهندس تصنيع – فريق Hud-Saba للطائرات بدون طيار | قونية – تركيا | 2021 – 2023",
+        desc: "تصميم وتصنيع مكونات الطائرات بدون طيار والتأهل لنهائيات مسابقة Bayraktar الدولية."
+      },
+      {
+        title: "فني صيانة أجهزة محمولة – مركز السلام | اليمن | 2017 – 2018",
+        desc: "تشخيص وصيانة أعطال الأجهزة الذكية برمجياً وعتادياً."
+      }
+    ],
+    volTitle: "الخبرات التطوعية",
+    volunteers: [
+      { title: "رئيس لجنة الرقابة – اتحاد طلاب اليمن في تركيا | 2021", desc: "الإشراف على الأنشطة المالية والإدارية وضمان الشفافية." },
+      { title: "عضو لجنة التنظيم واللوجستيات – منتدى طلاب اليمن الصيفي | 2022", desc: "تنظيم فعاليات بمشاركة 400+ طالب، إدارة الحشود وضمان انسيابية الأنشطة." },
+      { title: "رئيس لجنة النظام – أول عرس جماعي في تركيا | 2025", desc: "الإشراف على الانضباط والتنظيم وضمان نجاح الفعالية." }
+    ],
+    eduTitle: "التعليم",
+    education: "بكالوريوس هندسة ميكاترونيك – جامعة نجم الدين أربكان | تركيا | 2019 – 2024",
+    skillsTitle: "المهارات",
+    skills: ["إدارة الحملات التسويقية","تطوير الأعمال","إنتاج المحتوى الرقمي","برمجة PLC / C# / CNC","SolidWorks / AutoCAD","قيادة الفرق والعمل الجماعي"],
+    langsTitle: "اللغات",
+    languages: ["العربية: لغة أم","الإنجليزية: جيد جدًا","التركية: جيد جدًا"],
+    certTitle: "الشهادات والدورات",
+    certificates: [
+      "دبلوم في التسويق الرقمي واستراتيجيات الإعلام",
+      "دورة في التخطيط الاستراتيجي",
+      "دورة في برمجة PLC",
+      "دورة شاملة في برمجة C#",
+      "دورة برمجة ماكينات CNC",
+      "Mechatronics & IIoT",
+      "رخصة طيران طائرة بدون طيار (UAV)",
+      "دبلوم في اللغة الإنجليزية مع تحضير IELTS",
+      "رخصة قيادة"
+    ],
+    contactTitle: "تواصل",
+    contactText: "البريد: omerm30@gmail.com | الهاتف: +90 552 597 40 20 | LinkedIn",
+    footer: "جميع الحقوق محفوظة © 2025 عمر الصّيقل"
+  },
+
+  tr: {
+    docTitle: "Omar Al-Saiqal | Özgeçmiş",
+    name: "Omar Al-Saiqal",
+    role: "Mühendis, Yönetici ve Dijital Pazarlamacı",
+    age: "Yaş: 27 | Yemenli",
+    summaryTitle: "Mesleki Özgeçmiş",
+    summary: "Mekatronik mühendisi ve yönetici, dijital pazarlama ve medya konusunda tutkulu. Deneyimleri kampanya yönetimi, iş geliştirme, uluslararası pazarlık, lojistik koordinasyon ve etkinlik organizasyonunu içerir. Sürekli öğrenmeye hevesli.",
+    expTitle: "İş Deneyimi",
+    experiences: [
+      {
+        title: "Kurucu & Direktör – OMA Media Ajansı | İstanbul – Türkiye | 2023 – Günümüz",
+        desc: "Dijital pazarlama kampanyalarını yönetmek, medya ekiplerini koordine etmek, iş stratejileri geliştirmek ve kampanya analizleri yapmak. Instagram: @oma.media1"
+      },
+      {
+        title: "Süpervizör – Mishkat Kuran Forumu | Türkiye | 2025",
+        desc: "Kuran etkinliklerinin organizasyonu ve katılımcı yönetimi ile lojistik denetimi."
+      },
+      {
+        title: "Satış Mühendisi & İhracat Müdürü – Global Bridge Group | İstanbul – Türkiye | 2024 – 2025",
+        desc: "Satış ve ihracat operasyonlarının yönetimi, müşteri görüşmeleri ve lojistik koordinasyon."
+      },
+      {
+        title: "Uzaktan AI Eğitmeni – Outlier | 2022 – Günümüz",
+        desc: "AI modellerini eğitme ve değerlendirme, veri kalitesini artırma ve etiketleme süreçlerini iyileştirme."
+      },
+      {
+        title: "Mekatronik Stajyeri – Alamex Asansör | Türkiye | 2023",
+        desc: "Elektronik bileşen montajı, mikrodenetleyici programlama ve kalite kontrol desteği."
+      },
+      {
+        title: "Üretim Mühendisi – Hud-Saba İHA Takımı | Konya – Türkiye | 2021 – 2023",
+        desc: "İHA bileşenlerinin tasarımı ve üretimi; Bayraktar Uluslararası finallerine katılım."
+      },
+      {
+        title: "Mobil Cihaz Teknisyeni – Al-Salam Merkezi | Yemen | 2017 – 2018",
+        desc: "Akıllı cihazlarda yazılım ve donanım arızalarının teşhisi ve tamiri."
+      }
+    ],
+    volTitle: "Gönüllü Deneyimi",
+    volunteers: [
+      { title: "Denetleme Komitesi Başkanı – Türkiye'deki Yemen Öğrenciler Birliği | 2021", desc: "Mali ve idari faaliyetleri denetleyerek şeffaflığı sağlamak." },
+      { title: "Lojistik & Organizasyon Komitesi Üyesi – Yemen Öğrenciler Yaz Forumu | 2022", desc: "400+ öğrenciyle etkinlik organizasyonu, kalabalık yönetimi ve akış kontrolü." },
+      { title: "Düzen Komitesi Başkanı – Türkiye'deki İlk Toplu Düğün | 2025", desc: "Disiplin ve koordinasyon yönetimi ile etkinlik başarısını sağlamak." }
+    ],
+    eduTitle: "Eğitim",
+    education: "Mekatronik Mühendisliği Lisansı – Necmettin Erbakan Üniversitesi | Türkiye | 2019 – 2024",
+    skillsTitle: "Beceriler",
+    skills: ["Dijital Kampanya Yönetimi","İş Geliştirme","İçerik Üretimi","PLC / C# / CNC Programlama","SolidWorks / AutoCAD","Ekip Liderliği"],
+    langsTitle: "Diller",
+    languages: ["Arapça: Ana dil","İngilizce: Çok iyi","Türkçe: İyi"],
+    certTitle: "Sertifikalar & Kurslar",
+    certificates: [
+      "Dijital Pazarlama ve Medya Stratejileri Diploması",
+      "Stratejik Planlama Kursu",
+      "PLC Programlama Kursu",
+      "Kapsamlı C# Programlama Kursu",
+      "CNC Makine Programlama Kursu",
+      "Mekatronik & IIoT",
+      "İHA (İnsansız Hava Aracı) Pilot Lisansı",
+      "İngilizce Diploması ve IELTS Hazırlık",
+      "Sürücü Belgesi"
+    ],
+    contactTitle: "İletişim",
+    contactText: "Email: omerm30@gmail.com | Telefon: +90 552 597 40 20 | LinkedIn",
+    footer: "Tüm Hakları Saklıdır © 2025 Omar Al-Saiqal"
+  }
+};
+
+/* --- DOM population helper --- */
+function clearChildren(el){ while(el.firstChild) el.removeChild(el.firstChild); }
+
+function populate(lang){
+  const t = translations[lang];
+
+  // document title
+  document.getElementById('doc-title').textContent = t.docTitle || t.name;
+  document.title = t.docTitle || t.name;
+
+  // header
+  document.getElementById('name').textContent = t.name;
+  document.getElementById('role').textContent = t.role;
+  document.getElementById('age').textContent = t.age;
+
+  // summary
+  document.getElementById('summary-title').textContent = t.summaryTitle;
+  document.getElementById('summary').textContent = t.summary;
+
+  // experiences
+  const exContainer = document.getElementById('experiences');
+  clearChildren(exContainer);
+  t.experiences.forEach(exp=>{
+    const wrap = document.createElement('div');
+    wrap.className = 'job';
+    const h3 = document.createElement('h3');
+    h3.textContent = exp.title;
+    const p = document.createElement('p');
+    p.textContent = exp.desc;
+    wrap.appendChild(h3);
+    wrap.appendChild(p);
+    exContainer.appendChild(wrap);
+  });
+
+  // volunteers
+  const volContainer = document.getElementById('volunteers');
+  clearChildren(volContainer);
+  t.volunteers.forEach(v=>{
+    const wrap = document.createElement('div');
+    wrap.className = 'volunteer';
+    const h3 = document.createElement('h3');
+    h3.textContent = v.title;
+    const p = document.createElement('p');
+    p.textContent = v.desc;
+    wrap.appendChild(h3);
+    wrap.appendChild(p);
+    volContainer.appendChild(wrap);
+  });
+
+  // education
+  document.getElementById('edu-1').textContent = t.education;
+
+  // skills
+  const skillsList = document.getElementById('skills-list');
+  clearChildren(skillsList);
+  t.skills.forEach(s=>{
+    const li = document.createElement('li');
+    li.className = 'tag';
+    li.textContent = s;
+    skillsList.appendChild(li);
+  });
+
+  // languages
+  const langsList = document.getElementById('langs-list');
+  clearChildren(langsList);
+  t.languages.forEach(s=>{
+    const li = document.createElement('li');
+    li.className = 'tag';
+    li.textContent = s;
+    langsList.appendChild(li);
+  });
+
+  // certificates
+  const certList = document.getElementById('cert-list');
+  clearChildren(certList);
+  t.certificates.forEach(c=>{
+    const li = document.createElement('li');
+    li.className = 'tag';
+    li.textContent = c;
+    certList.appendChild(li);
+  });
+
+  // other small texts
+  document.getElementById('summary-title').textContent = t.summaryTitle;
+  document.getElementById('exp-title').textContent = t.expTitle || t.experiencesTitle || 'Work Experience';
+  document.getElementById('vol-title').textContent = t.volTitle || 'Volunteer Experience';
+  document.getElementById('edu-title').textContent = t.eduTitle || 'Education';
+  document.getElementById('skills-title').textContent = t.skillsTitle || 'Skills';
+  document.getElementById('langs-title').textContent = t.langsTitle || 'Languages';
+  document.getElementById('cert-title').textContent = t.certTitle || 'Certificates & Courses';
+  document.getElementById('contact-title').textContent = t.contactTitle || 'Contact';
+  document.getElementById('contact-text').innerHTML = formatContactText(t.contactText);
+  document.getElementById('footer-text').textContent = t.footer;
+  
+  // direction & language attribute
+  if(lang === 'ar'){
+    document.documentElement.lang = 'ar';
+    document.body.classList.add('rtl'); document.body.classList.remove('ltr');
+    document.getElementById('main-container').classList.add('rtl');
+  } else {
+    document.documentElement.lang = (lang === 'tr') ? 'tr' : 'en';
+    document.body.classList.add('ltr'); document.body.classList.remove('rtl');
+    document.getElementById('main-container').classList.remove('rtl');
+  }
 }
+
+/* format contact string: keep emails/phones links where possible */
+function formatContactText(txt){
+  // naive: replace email and phone with links
+  let out = txt || '';
+  out = out.replace(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g, '<a href="mailto:$1" class="link-accent">$1</a>');
+  out = out.replace(/(\+?\d[\d\s-]{6,}\d)/g, '<a href="tel:$1" class="link-accent">$1</a>');
+  // LinkedIn word -> link (if present)
+  out = out.replace(/LinkedIn/g, '<a href="https://www.linkedin.com/in/omar-a-2bb81a1b8" target="_blank" class="link-accent">LinkedIn</a>');
+  return out;
+}
+
+/* --- initial state --- */
+const defaultLang = 'en';
+document.getElementById('lang-switch').value = defaultLang;
+populate(defaultLang);
+
+/* switcher */
+document.getElementById('lang-switch').addEventListener('change', (e)=>{
+  populate(e.target.value);
+});
+
+/* dark mode toggle */
+function toggleDarkMode(){ document.body.classList.toggle('dark-mode'); }
 </script>
 </body>
 </html>
